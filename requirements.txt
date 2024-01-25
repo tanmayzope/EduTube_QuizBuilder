@@ -1,0 +1,6 @@
+python-dotenv
+streamlit
+pytube
+SpeechRecognition
+pydub
+openai==0.28
