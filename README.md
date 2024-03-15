@@ -63,7 +63,6 @@ To use EduTube QuizBuilder, follow these steps:
         ```
    
       This command creates a new directory named `venv` in your project folder, where the virtual environment files are stored.
-
 4. **Activating the Virtual Environment**:
 
      After creating the virtual environment, you need to activate it to use it for your project.
@@ -81,7 +80,6 @@ To use EduTube QuizBuilder, follow these steps:
      ```
    
    You'll know that your virtual environment is activated because your terminal's prompt will now include `(venv)`, indicating that any Python or pip commands you use will now affect only this virtual environment.
-
 5. **Installing Dependencies**:
 
    With the virtual environment activated, install the project dependencies using pip:
