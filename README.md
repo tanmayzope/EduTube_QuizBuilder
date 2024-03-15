@@ -1,12 +1,13 @@
 # EduTube QuizBuilder
 
-EduTube QuizBuilder is an innovative tool designed to leverage the power of OpenAI and YouTube for educational purposes. This Python-based application utilizes the Streamlit framework to provide a user-friendly interface, enabling educators, students, and content creators to fetch, transcribe, summarize, and even create comprehensive lesson plans from YouTube videos or playlists. Additionally, it offers a unique feature to generate quiz questions based on video transcriptions, making it an invaluable resource for enhancing learning experiences.
+EduTube QuizBuilder is an innovative tool designed to leverage the power of OpenAI and YouTube for educational purposes. This Python-based application utilizes the Streamlit framework to provide a user-friendly interface, enabling educators, students, and content creators to fetch, transcribe, summarize, create comprehensive lesson plans and even create notes for students from YouTube videos or playlists. Additionally, it offers a unique feature to generate quiz questions based on video transcriptions, making it an invaluable resource for enhancing learning experiences.
 
 ## Features
 
 - **Video Transcription**: Automatically transcribe YouTube videos or entire playlists, providing accessible written content for further analysis or study.
 - **Content Summarization**: Utilize OpenAI's GPT model to summarize video content, extracting key insights and important facts in a concise format.
 - **Lesson Plan Creation**: Generate detailed lesson plans from video transcriptions, tailored for Master's level education, including learning objectives, discussion questions, and activities.
+- **Student Notes Generation**: Leverage OpenAI's GPT model to produce concise, easy-to-understand notes from video transcriptions. This feature focuses on distilling the most important points and concepts into student-friendly notes, aiding in revision and comprehension.
 - **Quiz Question Generation**: Create advanced, customizable quiz questions based on video transcriptions, supporting different difficulty levels and educational standards.
 
 ## Installation
