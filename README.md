@@ -36,33 +36,33 @@ To use EduTube QuizBuilder, follow these steps:
    OPENAI_API_KEY=<Your-OpenAI-API-Key>
    ```
 
-To create and activate a virtual environment for EduTube QuizBuilder, follow these steps. This process is crucial for managing dependencies and ensuring that your project's packages don't conflict with those of other Python projects on your system.
-
-### Creating a Virtual Environment
-
-1. **Navigate to your project directory**:
-
-   Open a terminal or command prompt and navigate to the directory where you've cloned or placed the EduTube QuizBuilder project.
-
-   ```
-   cd path/to/EduTubeQuizBuilder
-   ```
-
-2. **Create the virtual environment**:
-
-   - **For Windows**:
-
-     ```
-     python -m venv venv
-     ```
-
-   - **For macOS and Linux**:
-
-     ```
-     python3 -m venv venv
-     ```
-
-   This command creates a new directory named `venv` in your project folder, where the virtual environment files are stored.
+   To create and activate a virtual environment, follow these steps. This process is crucial for managing dependencies and ensuring that your project's packages don't conflict with those of other Python projects on your system.
+   
+   ## Creating a Virtual Environment
+   
+   1. **Navigate to your project directory**:
+   
+      Open a terminal or command prompt and navigate to the directory where you've cloned or placed the EduTube QuizBuilder project.
+   
+      ```
+      cd path/to/EduTubeQuizBuilder
+      ```
+   
+   2. **Create the virtual environment**:
+   
+      - **For Windows**:
+   
+        ```
+        python -m venv venv
+        ```
+   
+      - **For macOS and Linux**:
+   
+        ```
+        python3 -m venv venv
+        ```
+   
+      This command creates a new directory named `venv` in your project folder, where the virtual environment files are stored.
 
 4. **Activating the Virtual Environment**:
 
