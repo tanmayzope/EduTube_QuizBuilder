@@ -84,23 +84,23 @@ You'll know that your virtual environment is activated because your terminal's p
 
 5. **Installing Dependencies**:
 
-With the virtual environment activated, install the project dependencies using pip:
-
-```
-pip install -r requirements.txt
-```
-
-This ensures that all the required Python packages, including Streamlit, OpenAI, PyTube, and others, are installed within the virtual environment.
+   With the virtual environment activated, install the project dependencies using pip:
+   
+   ```
+   pip install -r requirements.txt
+   ```
+   
+   This ensures that all the required Python packages, including Streamlit, OpenAI, PyTube, and others, are installed within the virtual environment.
 
 6. **Usage**
 
-To run EduTube QuizBuilder, execute the following command:
-
-```
-streamlit run app.py
-```
-
-Upon launching, you'll be greeted by the Streamlit interface where you can choose between processing a single YouTube video or a playlist. Depending on your selection, you can transcribe the video(s), generate summaries, create lesson plans, or generate quiz questions based on the content.
+   To run EduTube QuizBuilder, execute the following command:
+   
+   ```
+   streamlit run app.py
+   ```
+   
+   Upon launching, you'll be greeted by the Streamlit interface where you can choose between processing a single YouTube video or a playlist. Depending on your selection, you can transcribe the video(s), generate summaries, create lesson plans, or generate quiz questions based on the content.
 
 ### Key Functionalities:
 
