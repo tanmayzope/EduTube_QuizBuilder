@@ -66,21 +66,21 @@ To use EduTube QuizBuilder, follow these steps:
 
 4. **Activating the Virtual Environment**:
 
-  After creating the virtual environment, you need to activate it to use it for your project.
-
-- **For Windows**:
-
-  ```
-  .\venv\Scripts\activate
-  ```
-
-- **For macOS and Linux**:
-
-  ```
-  source venv/bin/activate
-  ```
-
-You'll know that your virtual environment is activated because your terminal's prompt will now include `(venv)`, indicating that any Python or pip commands you use will now affect only this virtual environment.
+     After creating the virtual environment, you need to activate it to use it for your project.
+   
+   - **For Windows**:
+   
+     ```
+     .\venv\Scripts\activate
+     ```
+   
+   - **For macOS and Linux**:
+   
+     ```
+     source venv/bin/activate
+     ```
+   
+   You'll know that your virtual environment is activated because your terminal's prompt will now include `(venv)`, indicating that any Python or pip commands you use will now affect only this virtual environment.
 
 5. **Installing Dependencies**:
 
