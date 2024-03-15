@@ -38,7 +38,7 @@ To use EduTube QuizBuilder, follow these steps:
 
    To create and activate a virtual environment, follow these steps. This process is crucial for managing dependencies and ensuring that your project's packages don't conflict with those of other Python projects on your system.
    
-   ## Creating a Virtual Environment
+    **Creating a Virtual Environment**
    
    1. **Navigate to your project directory**:
    
