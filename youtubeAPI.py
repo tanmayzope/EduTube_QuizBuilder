@@ -73,10 +73,11 @@ def generate_quiz_questions(api_key, context, difficulty, number_of_questions):
 
     formatted_prompt = (
         f"Create {number_of_questions} advanced, master's level standard questions based on the following {difficulty} text. "
-        "Each question should:\n\n"
-        "1. Be based on the context provided.\n"
+        "Each MCQ question should:\n\n"
+        "1. Be based on the context provided and it should have 4 options show 4 options on 4 new lines.\n"
         "2. Include a variety of question types:\n"
-        "3. Provide correct answer and display it on a new line and provide a brief explanation for the correct answer\n\n"
+        "3. Provide correct answer and display it on a new line\n\n"
+        "4. Provide explanation of correct answer and display it on a new line\n\n"
         "Context for questions:\n\n" + context
     )
     response = openai.Completion.create(
@@ -104,16 +105,39 @@ def generate_lesson_plan(api_key, transcription, topic):
     """
 
     response = openai.Completion.create(
-        engine="gpt-3.5-turbo-instruct",  # Consider using the latest available model
+        engine="gpt-3.5-turbo-instruct",  
         prompt=prompt,
         temperature=0.8,
-        max_tokens=1500,  # Adjust based on your needs
+        max_tokens=1500,  
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0
     )
     
     return response.choices[0].text.strip()
+
+def generate_student_notes(api_key, transcription, topic):
+    openai.api_key = api_key
+
+    # Construct the prompt for generating student notes
+    prompt = f"""
+    Given the following transcription on {topic}, create a concise, easy-to-understand notes for students and write it in bullet points in student friendly manner.
+
+    Transcription: {transcription}
+    """
+
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct", 
+        prompt=prompt,
+        temperature=0.8,
+        max_tokens=1500,  
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0
+    )
+    
+    return response.choices[0].text.strip()
+
 
 
 def main():
@@ -204,14 +228,14 @@ def main():
             st.session_state['selected_titles'] = selected_titles
 
             user_choice = st.radio("Choose an action",
-                                   ("Transcribe", "Summarize", "Create Lesson Plan"),  # Added "Create Lesson Plan"
+                                   ("Transcribe", "Summarize", "Create Lesson Plan", "Create Notes"),
                                    key="action_selection")
 
     elif user_input_type == "YouTube Video":
         video_url = st.text_input("Enter the URL of the YouTube Video")
         if video_url:
             user_choice = st.radio("Choose an action",
-                                   ("Transcribe", "Summarize", "Create Lesson Plan"),  
+                                   ("Transcribe", "Summarize", "Create Lesson Plan","Create Notes"),  
                                    key="video_action_selection")
 
     if st.button("Process"):
@@ -231,6 +255,14 @@ def main():
                 elif user_choice == "Transcribe":
                     st.session_state['result'] = processed_data
                     st.session_state['transcription_for_quiz'] = processed_data
+                elif user_choice == "Create Notes":
+                    st.session_state['result'] = {
+                        title: generate_student_notes(
+                            openai_api_key,
+                            text,
+                            title
+                        ) for title, text in processed_data.items()
+                    }
                 elif user_choice == "Create Lesson Plan":
                     st.session_state['result'] = {
                         title: generate_lesson_plan(
